@@ -1,0 +1,22 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-01T07:38:51.524Z",
+  "summary": "The diff implements REQ-9 by seeding 12 sample menu items across 4 categories (Starters, Mains, Desserts, Drinks) in backend/main.mo. Each item has a non-empty name, description, price > 0, a valid category string, and availability set to true. A migration module (backend/migration.mo) is also added to handle the seeding on upgrade. The implementation satisfies all stated acceptance criteria for REQ-9.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "A new file backend/migration.mo was added as a separate module",
+      "reason": "The build request constraint explicitly states 'Seeding must occur inside the existing single Motoko actor in backend/main.mo — no new files or actors.' Adding backend/migration.mo violates this constraint.",
+      "evidence": [
+        "backend/migration.mo"
+      ]
+    }
+  ],
+  "confidence": 0.88,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "project_state.json"
+  ]
+}

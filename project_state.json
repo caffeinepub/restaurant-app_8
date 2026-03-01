@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Restaurant management application with full source code.",
+  "architectural_notes": [
+    "Restaurant app with frontend UI and backend source code",
+    "Core modules: menu, reservations, orders, billing, admin dashboard"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-public-facing-menu-page-that-displays-all-menu-items-grouped-by-category-e-g-starters-mains-desserts-drinks-each-item-card-shows-the-name-description-price-and-an-availability-badge-items-marked-unavailable-should-appear-dimmed",
+      "title": "Build a public-facing Menu page that displays all menu items grouped by category (e.g., Starters, Mains, Desserts, Drinks). Each item card shows the name, description, price, and an availability badge. Items marked unavailable should appear dimmed.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-table-reservation-page-where-guests-can-view-available-tables-select-a-table-and-submit-a-reservation-with-their-name-party-size-and-preferred-date-time-existing-reservations-for-a-table-should-be-visible-to-avoid-conflicts",
+      "title": "Build a Table Reservation page where guests can view available tables, select a table, and submit a reservation with their name, party size, and preferred date/time. Existing reservations for a table should be visible to avoid conflicts.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-order-management-page-for-staff-use-where-a-waiter-can-select-a-table-browse-the-menu-add-items-to-an-order-and-submit-the-order-the-page-should-also-list-active-orders-with-their-current-status-and-allow-updating-order-status",
+      "title": "Build an Order Management page (for staff use) where a waiter can select a table, browse the menu, add items to an order, and submit the order. The page should also list active orders with their current status and allow updating order status.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-billing-page-for-staff-use-where-a-completed-order-can-be-reviewed-and-a-bill-generated-the-bill-should-display-itemized-charges-subtotal-and-a-button-to-mark-payment-as-received",
+      "title": "Build a Billing page (for staff use) where a completed order can be reviewed and a bill generated. The bill should display itemized charges, subtotal, and a button to mark payment as received.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-admin-dashboard-page-that-provides-an-overview-of-restaurant-operations-total-tables-and-their-statuses-today-s-reservations-count-active-orders-count-and-total-revenue-from-paid-bills-include-a-menu-management-section-where-admins-can-add-edit-or-toggle-availability-of-menu-items-include-a-tables-management-section-where-admins-can-add-or-remove-tables",
+      "title": "Build an Admin Dashboard page that provides an overview of restaurant operations: total tables and their statuses, today's reservations count, active orders count, and total revenue from paid bills. Include a Menu Management section where admins can add, edit, or toggle availability of menu items. Include a Tables Management section where admins can add or remove tables.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-warm-elegant-restaurant-visual-theme-across-the-entire-frontend-use-rich-earthy-tones-deep-burgundy-warm-cream-gold-accents-a-refined-serif-inspired-typography-hierarchy-and-a-clean-card-based-layout-navigation-should-include-a-sidebar-or-top-nav-with-links-to-menu-reservations-orders-billing-and-admin-dashboard",
+      "title": "Apply a warm, elegant restaurant visual theme across the entire frontend. Use rich earthy tones (deep burgundy, warm cream, gold accents), a refined serif-inspired typography hierarchy, and a clean card-based layout. Navigation should include a sidebar or top nav with links to: Menu, Reservations, Orders, Billing, and Admin Dashboard.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-generated-logo-image-restaurant-logo-dim-200x200-png-and-hero-banner-image-restaurant-hero-dim-1200x400-png-as-static-assets-served-from-frontend-public-assets-generated-display-the-logo-in-the-navigation-bar-and-the-hero-banner-on-the-landing-menu-page",
+      "title": "Use the generated logo image (restaurant-logo.dim_200x200.png) and hero banner image (restaurant-hero.dim_1200x400.png) as static assets served from frontend/public/assets/generated. Display the logo in the navigation bar and the hero banner on the landing/menu page.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Menu display and management",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Table reservation and booking system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Order management (place, track, update orders)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Billing and payment processing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Admin dashboard for restaurant management",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a Motoko backend actor that stores and manages the restaurant's core data: menu items (id, name, description, price, category, availability), tables (id, number, capacity, status), reservations (id, tableId, guestName, guestCount, dateTime, status), orders (id, tableId, items, totalAmount, status, createdAt), and bills (id, orderId, totalAmount, paymentStatus).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Pre-populate the backend with a set of sample menu items covering multiple categories (e.g., Starters, Mains, Desserts, Drinks) so that the Menu page displays real content out of the box. Each item should have a name, description, price, category, and availability set to true.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Restaurant App",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

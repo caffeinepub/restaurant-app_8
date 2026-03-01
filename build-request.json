@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Pre-populate backend with sample menu items",
+  "projectName": "Restaurant Manager",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Pre-populate the backend with a set of sample menu items covering multiple categories (e.g., Starters, Mains, Desserts, Drinks) so that the Menu page displays real content out of the box. Each item should have a name, description, price, category, and availability set to true.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-5"
+        ],
+        "quotes": [
+          "yes",
+          "including menu items"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 8–12 sample menu items are seeded in the backend actor, spread across at least 3 distinct categories.",
+        "Each item has a non-empty name, description, price greater than 0, a valid category string, and availability set to true.",
+        "The public Menu page displays all seeded items grouped by their category without any manual admin action.",
+        "Seeded items are visible in the Admin Dashboard's Menu Management section and can be edited or toggled."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter the existing MenuItem data model or any other backend data structures.",
+    "Seeding must occur inside the existing single Motoko actor in backend/main.mo — no new files or actors.",
+    "Do not modify any files listed under frontend.immutablePaths."
+  ],
+  "nonGoals": [
+    "Adding new menu categories or changing the category taxonomy beyond what is already supported.",
+    "Changing the frontend Menu page layout or design.",
+    "Adding customer-facing ordering or checkout functionality.",
+    "Implementing staff authentication or role changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

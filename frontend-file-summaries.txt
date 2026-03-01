@@ -1,0 +1,4 @@
+{
+  "frontend/src/App.tsx": "Main application entry point that sets up TanStack Router with five routes (/, /reservations, /orders, /billing, /admin), wraps all pages in the Layout component via a root route shell, and shows the profile setup modal for newly authenticated staff.",
+  "frontend/src/pages/AdminDashboardPage.tsx": "Admin-only dashboard page wrapped in StaffGuard that displays five operational stats cards (tables, occupancy, reservations, orders, revenue) plus full Menu and Tables management sections for CRUD operations."
+}
